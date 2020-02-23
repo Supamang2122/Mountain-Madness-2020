@@ -129,10 +129,6 @@ Example Output with example meal price of $60.50:
 ```
 The rest of you must pay $20.17 each, for the total meal price of $60.50
 ```
-    
-
-
-### 5. Setting the ordering location
 
 ### 6. Placing the order
 
