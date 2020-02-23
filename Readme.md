@@ -151,12 +151,12 @@ The order is then placed using the Google Pay card on that person's cellphone.
 
 # Summary/ TLDR
 Our Program involves the use of- 
--a Natural Language Bot, 
--an intelligent Questionnaire based off of Buzzfeed Algorithms (Which our MCQBot fills in)
--A roster of cuisines and menu items selected by screen scraping from the SkipTheDishes App
--A Discount API
--A Price is Right / Russian Roulette Style game to determine who pays for the food
--A ClickerBot that makes the computer use the phone to place an order
+-	a Natural Language Bot, 
+-	an intelligent Questionnaire based off of Buzzfeed Algorithms (Which our MCQBot fills in)
+-	A roster of cuisines and menu items selected by screen scraping from the SkipTheDishes App
+-	A Discount API
+-	A Price is Right / Russian Roulette Style game to determine who pays for the food
+-	A ClickerBot that makes the computer use the phone to place an order
 
 Besides being a long process for the computer, our project is futuristic. Far from a world of Flying Cars and Teleportation, our Application focuses on the more real/ dystopian aspects of human nature and society that we expect to see more of later. 
 It reflects on a capitalistic system inherently overengineered yet functioning. Much like taxes, we first calculate how much you owe the app. However, instead of just giving you the price, we make you guess how much you owe; and if you guess wrong, we pull an IRS and take more of your money. Our application also uses two extremely sophisticated bots to talk to each other and agree that they both know information that they both received to begin with. In a world with a future filled with Red Tape and Beaureaucrats, we can expect nothing better.  
