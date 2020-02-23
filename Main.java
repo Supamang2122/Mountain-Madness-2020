@@ -63,4 +63,5 @@ class Main {
     System.out.println("The rest of you must pay $" + f1.format(final_price) + " each, for the total of $" + f1.format(price));
 
 }
+  
 }
