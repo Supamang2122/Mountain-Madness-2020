@@ -10,10 +10,21 @@ Futuristic food assessment and delivery
 ## Specifics of sections
 ### 1. Using the Questionnaire to assess cuisine/ restaurant
    The goal of this section is to assess a person's current cravings through an innoccuous Questionnaire of easy to answer choices
-   
-   
+
+An array of cuisine choices is created and answers to each question determine the number of tally-marks added to or removed from each possible cuisine. 
+
+Here's an example of one of the questions.
+```
+How often do you visit the seaside?
+1.) Never been
+2.) Occassionally when forced to
+3.) Whenever I can.
+4.) The sea is my one true passion. Dry land is death
+```
+The more a person visits the seaside, the more likely they are to like seafood. Thus, the tally marks would be added to Sushi and any other cuisine tha does involve fish.  
+
 ### 2. Details of the MCQBot
-   This is the implementation of a simple bot to answer multiple choice question. The idea is pretty simple - design a function that    takes as input a question, and a list of choices (number of choices is not fixed), and that returns the index of the choice you believe is the right one. 
+   This is the implementation of a simple bot to answer multiple choice question. The idea is pretty simple - design a function that    takes as input a question, and a list of choices (number of choices is not fixed), and that returns the index of the choice believed to be the right/ most popular one. 
    
 ```
 How often do you visit the seaside?
