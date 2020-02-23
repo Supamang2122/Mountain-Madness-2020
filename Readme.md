@@ -21,7 +21,7 @@ Do you feel like visiting the seaside?
 3.) I'd like to.
 4.) The sea is my one true passion. Dry land is death
 ```
-The more a person visits the seaside, the more likely they are to like seafood. Thus, the tally marks would be added to Sushi and any other cuisine tha does involve fish.  
+The more a person visits the seaside, the more likely they are to like seafood. Thus, the tally marks would be added to Sushi and any other cuisine that does involve fish.  
 
 ### 2. Details of the MCQBot
    This is the implementation of a simple bot to answer multiple choice question. The idea is pretty simple - design a function that    takes as input a question, and a list of choices (number of choices is not fixed), and that returns the index of the choice believed to be the right/ most popular one. 
