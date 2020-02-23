@@ -24,11 +24,23 @@ Futuristic food assessment and delivery
    This is taken from an open source API on github. There is a simple API that lets you make some research in google, which has been wrapped in python, [Google-Search-API](https://github.com/abenassi/Google-Search-API). 
    Here's the syntax of the python statements I've used to search for stuff on Google.
     
-      ```py
-      from google import google
-      my_search = google.search('winner world cup 2018')
       ```
-    
+      from google import google
+      my_search = google.search('Search terms')
+      ```
+   This Google API software uses screen scraping to retreive search results from google.com. After cleaning the text extracted from the search, I concat all the text together as one really long string that represents all the text available on first pages of google. I then score each of my search results in order to determine which one would be the best. 
+   
+   **my_search** will contain a list of GoogleResult objects
+      ```
+      GoogleResult:
+          self.name # The title of the link
+          self.link # The link url
+          self.description # The description of the link
+          self.thumb # The link to a thumbnail of the website (not implemented yet)
+          self.cached # A link to the cached version of the page
+          self.page # What page this result was on (When searching more than one page)
+          self.index # What index on this page it was on
+      ```   
 ### 3. Generating and determining the final bill
 
 ### 4. Dividing the Payment - The price is right
