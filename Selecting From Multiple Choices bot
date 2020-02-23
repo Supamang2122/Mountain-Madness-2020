@@ -19,46 +19,6 @@ def get_n_grams(sequence, n):
         grams.append([sequence[i] for i in range(k, k + n)])
     return grams
 
-def is_negative_question(question, lang='fra'):
-    """
-    Function to check whether the question is negative question.
-    example : 'Among ..., which ... is NOT ... ?'
-    - question: target question
-    - lang: language of the question
-    """
-    if lang != 'fra':
-        raise ValueError("other languages that french aren't implemented")
-
-    # Define negative patterns
-    negative_patterns = [" n'", " ne "]
-
-    # Detect negative patterns
-    for negative_pattern in negative_patterns:
-        if negative_pattern in question:
-            return True
-    return False
-
-def correct_unknown_chars(string):
-    """
-    Some characters have different possibilities, according to language, such as
-    apostrophes or quotes. We make sure to transcode them to a common value.
-    - string: unicode string to be corrected
-    """
-    # Create the reverse mapping
-    reverse_mapping = {
-        "'": [u'‘', u'’'], # apostrophes
-        '"': [u'«', u'»', u'‹', u'›', u'“', u'”'] # quotes
-    }
-    # Generate the original mapping by reversing the reverse mapping
-    mapping = dict()
-    for key in reverse_mapping:
-        for item in reverse_mapping[key]:
-            mapping[item] = key
-
-    # Replace chars using the mapping
-    string = reduce(lambda x, y: x.replace(y, mapping[y]), mapping, string)
-    return string
-
 def get_grams(string):
     """
     From a given string, extract the unigrams and the bigrams, postprocess them
