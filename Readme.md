@@ -149,7 +149,7 @@ bot.delay(10000);
 ```
 The order is then placed using the Google Pay card on that person's cellphone. 
 
-#Summary TLDR
+# Summary TLDR
 Our Program involves the use of- 
 a Natural Language Bot, 
 an intelligent Questionnaire based off of Buzzfeed Algorithms (Which our MCQBot fills in)
