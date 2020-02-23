@@ -16,7 +16,7 @@ Futuristic food assessment and delivery
     How often do you visit the seaside?
     1.) Never been
     2.) Occassionally when forced to
-    3.) Whenever I can. 
+    3.) Whenever I can.
     4.) The sea is my one true passion. Dry land is death
     ```
    This particular bot focusses on semantic analysis for NLP to answer pseudo open field questions. It looks through google results and
@@ -33,13 +33,13 @@ Futuristic food assessment and delivery
    **my_search** will contain a list of GoogleResult objects
       ```
       GoogleResult:
-          self.name # The title of the link
-          self.link # The link url
-          self.description # The description of the link
-          self.thumb # The link to a thumbnail of the website (not implemented yet)
-          self.cached # A link to the cached version of the page
-          self.page # What page this result was on (When searching more than one page)
-          self.index # What index on this page it was on
+         self.name # The title of the link
+         self.link # The link url
+         self.description # The description of the link
+         self.thumb # The link to a thumbnail of the website (not implemented yet)
+         self.cached # A link to the cached version of the page
+         self.page # What page this result was on (When searching more than one page)
+         self.index # What index on this page it was on
       ```   
 ### 3. Generating and determining the final bill
 
