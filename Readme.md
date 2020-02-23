@@ -15,10 +15,10 @@ An array of cuisine choices is created and answers to each question determine th
 
 Here's an example of one of the questions.
 ```
-How often do you visit the seaside?
-1.) Never been
-2.) Occassionally when forced to
-3.) Whenever I can.
+Do you feel like visiting the seaside?
+1.) Never
+2.) Occassionally but only when forced to
+3.) I'd like to.
 4.) The sea is my one true passion. Dry land is death
 ```
 The more a person visits the seaside, the more likely they are to like seafood. Thus, the tally marks would be added to Sushi and any other cuisine tha does involve fish.  
@@ -27,10 +27,10 @@ The more a person visits the seaside, the more likely they are to like seafood. 
    This is the implementation of a simple bot to answer multiple choice question. The idea is pretty simple - design a function that    takes as input a question, and a list of choices (number of choices is not fixed), and that returns the index of the choice believed to be the right/ most popular one. 
    
 ```
-How often do you visit the seaside?
-1.) Never been
-2.) Occassionally when forced to
-3.) Whenever I can.
+Do you feel like visiting the seaside?
+1.) Never
+2.) Occassionally but only when forced to
+3.) I'd like to.
 4.) The sea is my one true passion. Dry land is death
 ```
 #### How the data scraper Works   
@@ -60,9 +60,9 @@ self.index # What index on this page it was on
 After cleaning the text extracted from the search, I concatenate all the text together as one really long string that represents all the text available on first pages of google. I then score each of my search results in order to determine which one would be the best. 
 
 #### How the NLP syntax analysis Works
-In order to find the answer, I use n-grams. For example, if the search term is 'How often visit sea Kylie Jenner', then,
+In order to find the answer, I use n-grams. For example, if the search term is 'How often visit sea FName LName', then,
 ```
-1-grams = ["How", "often", "visit", "sea", "Kylie", "Jenner"]
+1-grams = ["How", "often", "visit", "sea", "FName", "LName"]
 2-grams = ["How often", "visit sea", "Kylie Jenner"]
 etc.
 ```
