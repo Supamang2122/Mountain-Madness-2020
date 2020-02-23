@@ -9,17 +9,25 @@ Futuristic food assessment and delivery
 
 ## Specifics of sections
 ### 1. Using the Questionnaire to assess cuisine/ restaurant
-    The goal of this section is to assess a person's current cravings through an innoccuous Questionnaire of easy to answer questions
+   The goal of this section is to assess a person's current cravings through an innoccuous Questionnaire of easy to answer questions
 ### 2. Details of the MCQBot
-    This is the implementation of a simple bot to answer multiple choice questions
-    ```
+   This is the implementation of a simple bot to answer multiple choice question. The idea is pretty simple - design a function that    takes as input a question, and a list of choices (number of choices is not fixed), and that returns the index of the choice you believe is the right one. 
+    
     How often do you visit the seaside?
     1.) Never been
     2.) Occassionally when forced to
     3.) Whenever I can. 
     4.) The sea is my one true passion. Dry land is death
     ```
+   This particular bot focusses on semantic analysis for NLP to answer pseudo open field questions. It looks through google results and
+   uses the information it receives to make the best choice.
+   This is taken from an open source API on github. There is a simple API that lets you make some research in google, which has been wrapped in python, [Google-Search-API](https://github.com/abenassi/Google-Search-API). 
+   Here's the syntax of the python statements I've used to search for stuff on Google.
     
+    ```py
+    from google import google
+    my_search = google.search('winner world cup 2018')
+    ```
     
 ### 3. Generating and determining the final bill
 
