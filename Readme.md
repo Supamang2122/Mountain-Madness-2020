@@ -1,7 +1,7 @@
 # Overview of Project - The 'Peak' of Food Delivery
 Futuristic food assessment and delivery
 -	Makes user take Questionnaire to assess which cuisine/restaurant they'd like 
--	Decides which food to order using an MCQBot
+-	Decides which food to order using an Natural Language Processing Bot that answers and sorts Multiple Choice Questions
 -	Generates a bill by adding the food and then running the order through an offer finder. 
 -	Allows you to divide the payment by guessing which of you comes the closest to the price. The tip, and the amount of money used will     be a function of the amounts guessed 
 -	Sets the ordering location by taking your location from Google coordinates
@@ -119,17 +119,46 @@ Person 4, enter your guess:
 
 Example Output:
 ```
-Person 3, you must pay the difference of $14.90 as the tip.
-```
-
-
-**4) The remaining person(s) will then split the total bill for the meal (not including tips).**
-**The computer will output the split value as well as the total cost of the meal.**
-
-Example Output with example meal price of $60.50:
-```
-The rest of you must pay $20.17 each, for the total meal price of $60.50
+Person 3, you must pay 60.5 for the food and the difference of $14.90 as the tip.
 ```
 
 ### 6. Placing the order
+The person who had the largest absolute difference connects their phone to the computer.
+The computer remotely controls the phone and opens the SkipTheDishes App, fills in the information blanks one by one with the data it receives from the MCQBot; and then places the order for the food.
 
+In order to do this, we use the scrcpy software. We determine the precise screen coordinates where we must click in order to perform the function we need it to perform and enter in the information into the search bar.
+```
+klick(550, 600);
+pastee(600, 350, "Seafood");
+klick(600, 350);
+scrolle();
+klick(600, 820);
+klick(600, 820);
+klick(600, 820);
+pastee(740,720,"10");
+```
+Our bot performs these functions as we have defined for it. For instance, the klick function looks like this
+```
+public static void klick(int x, int y) {
+bot.mouseMove(x, y);
+bot.delay(5);
+bot.mousePress(MouseEvent.BUTTON1_MASK);
+bot.mouseRelease(MouseEvent.BUTTON1_MASK);
+bot.delay(10000);
+}
+```
+The order is then placed using the Google Pay card on that person's cellphone. 
+
+#Summary TLDR
+Our Program involves the use of- 
+a Natural Language Bot, 
+an intelligent Questionnaire based off of Buzzfeed Algorithms (Which our MCQBot fills in)
+A roster of cuisines and menu items selected by screen scraping from the SkipTheDishes App
+A Discount API
+A Price is Right / Russian Roulette Style game to determine who pays for the food
+and a ClickerBot that makes the computer use the phone to place an order
+
+Besides being a long process for the computer, our project is futuristic. Far from a world of Flying Cars and Teleportation, our Application focuses on the more real/ dystopian aspects of human nature and society that we expect to see more of later. 
+It reflects on a capitalistic system inherently overengineered yet functioning. Much like taxes, we first calculate how much you owe the app. However, instead of just giving you the price, we make you guess how much you owe; and if you guess wrong, we pull an IRS and take more of your money. Our application also uses two extremely sophisticated bots to talk to each other and agree that they both know information that they both received to begin with. In a world with a future filled with Red Tape and Beaureaucrats, we can expect nothing better.  
+At the same time, our application does what it's meant to - Identify and Order Food that you crave with the touch of a single button. 
+Also our project name has a mountain pun. 
