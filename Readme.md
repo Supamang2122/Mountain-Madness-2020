@@ -90,7 +90,7 @@ In that way, if only one word of the choice occurs, it only adds 1 point to the 
 
 We felt it was necessary to make everyone pay at least a percentage of the meal, so we devised a clever (possibly evil) game to decide how the meal will be paid for. 
 
-## The premise of our game is simple:
+#### The premise of our game is simple:
 
 **1) The computer will ask how many people are ordering food.**
 
