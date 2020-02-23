@@ -81,8 +81,11 @@ In that way, if only one word of the choice occurs, it only adds 1 point to the 
  This would select the cuisine and then add in food from the restaurant and add it into the checkout using the same principles.   
 
 ### 3. Generating and determining the final bill
+   The food selected by the MCQBot is put into the cart. We then use the [Honey-Coupon-API](https://developer.honey.is/docs) to run a series of discount checks on the cart.
+   The final price, along with taxes but excluding the tip is calculated and sent to the DividingPayment function to help distribute and figure out the bill (for groups of people).  
 
 ### 4. Dividing the Payment - The price is right
+
 
 ### 5. Setting the ordering location
 
