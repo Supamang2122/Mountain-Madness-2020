@@ -63,7 +63,7 @@ After cleaning the text extracted from the search, I concatenate all the text to
 In order to find the answer, I use n-grams. For example, if the search term is 'How often visit sea FName LName', then,
 ```
 1-grams = ["How", "often", "visit", "sea", "FName", "LName"]
-2-grams = ["How often", "visit sea", "Kylie Jenner"]
+2-grams = ["How often", "visit sea",  "FName LName"]
 etc.
 ```
 
