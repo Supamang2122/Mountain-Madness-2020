@@ -126,7 +126,7 @@ Person 3, you must pay 60.5 for the food and the difference of $14.90 as the tip
 The person who had the largest absolute difference connects their phone to the computer.
 The computer remotely controls the phone and opens the SkipTheDishes App, fills in the information blanks one by one with the data it receives from the MCQBot; and then places the order for the food.
 
-In order to do this, we use the scrcpy software. We determine the precise screen coordinates where we must click in order to perform the function we need it to perform and enter in the information into the search bar.
+In order to do this, we created a ClickerBot that uses the scrcpy software. We determine the precise screen coordinates where we must click in order to perform the function we need it to perform and enter in the information into the search bar.
 ```
 klick(550, 600);
 pastee(600, 350, "Seafood");
@@ -137,7 +137,7 @@ klick(600, 820);
 klick(600, 820);
 pastee(740,720,"10");
 ```
-Our bot performs these functions as we have defined for it. For instance, the klick function looks like this
+Our bot performs these functions as we have very specifically defined for it. For instance, the klick function looks like this
 ```
 public static void klick(int x, int y) {
 bot.mouseMove(x, y);
@@ -149,7 +149,7 @@ bot.delay(10000);
 ```
 The order is then placed using the Google Pay card on that person's cellphone. 
 
-# Summary TLDR
+# Summary/ TLDR
 Our Program involves the use of- 
 a Natural Language Bot, 
 an intelligent Questionnaire based off of Buzzfeed Algorithms (Which our MCQBot fills in)
