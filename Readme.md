@@ -116,6 +116,7 @@ Person 4, enter your guess:
 
 **3) Then the difference between each of the guesses and the actual price will be calculated.**
 **The person with the largest price difference will be chosen to pay that difference as the tip.** 
+
 Example Output:
 ```
 Person 3, you must pay the difference of $14.90 as the tip.
