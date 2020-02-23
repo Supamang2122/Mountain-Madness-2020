@@ -13,7 +13,7 @@ Futuristic food assessment and delivery
 
 An array of cuisine choices is created and answers to each question determine the number of tally-marks added to or removed from each possible cuisine. 
 
-Here's an example of one of the questions.
+Here's an example of one of the questions:
 ```
 Do you feel like visiting the seaside?
 1.) Never
@@ -116,10 +116,12 @@ Person 4, enter your guess:
 
 **3) Then the difference between each of the guesses and the actual price will be calculated.**
 **The person with the largest price difference will be chosen to pay that difference as the tip.** 
+**The remaining people will then split the bill evenly.**
 
 Example Output:
 ```
-Person 3, you must pay 60.5 for the food and the difference of $14.90 as the tip.
+Person 3, you must pay the difference of $14.90 as the tip.
+The rest of you must pay $20.17 each, for the total meal price of $60.50
 ```
 
 ### 6. Placing the order
