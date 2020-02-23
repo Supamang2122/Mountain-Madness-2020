@@ -24,10 +24,10 @@ Futuristic food assessment and delivery
    This is taken from an open source API on github. There is a simple API that lets you make some research in google, which has been wrapped in python, [Google-Search-API](https://github.com/abenassi/Google-Search-API). 
    Here's the syntax of the python statements I've used to search for stuff on Google.
     
-    ```py
-    from google import google
-    my_search = google.search('winner world cup 2018')
-    ```
+     ```py
+     from google import google
+     my_search = google.search('winner world cup 2018')
+     ```
     
 ### 3. Generating and determining the final bill
 
