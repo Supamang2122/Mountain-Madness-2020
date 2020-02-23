@@ -4,7 +4,7 @@ Futuristic food assessment and delivery
 -	Decides which food to order using an MCQBot
 -	Generates a bill by adding the food and then running the order through an offer finder. 
 -	Allows you to divide the payment by guessing which of you comes the closest to the price. The tip, and the amount of money used will     be a function of the amounts guessed 
--	Sets the ordering location by gradually narrowing down onto your location from Google coordinates
+-	Sets the ordering location by taking your location from Google coordinates
 -	Places the order on a connected phone
 
 ## Specifics of sections
@@ -86,7 +86,4 @@ In that way, if only one word of the choice occurs, it only adds 1 point to the 
 
 ### 4. Dividing the Payment - The price is right
 
-
-### 5. Setting the ordering location
-
-### 6. Placing the order
+### 5. Placing the order
