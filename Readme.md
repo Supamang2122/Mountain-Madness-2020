@@ -86,4 +86,53 @@ In that way, if only one word of the choice occurs, it only adds 1 point to the 
 
 ### 4. Dividing the Payment - The price is right
 
-### 5. Placing the order
+   To make the process of ordering food even more entertaining, we thought it was necessary to implement a way to choose who gets to pay.
+
+We felt it was necessary to make everyone pay at least a percentage of the meal, so we devised a clever (possibly evil) game to decide how the meal will be paid for. 
+
+## The premise of our game is simple:
+
+**1) The computer will ask how many people are ordering food.**
+
+Example Input/Output Using 4 persons:
+```
+How many people are there?
+4
+```
+
+**2) Given the price, the computer will then ask each person to input a value that THEY think is the price of the total meal (including taxes, not including tips).**
+
+Example Input/Output:
+```
+Person 1, enter your guess:
+50.50
+Person 2, enter your guess:
+73.40
+Person 3, enter your guess:
+45.60
+Person 4, enter your guess:
+50.60
+```
+
+**3) Then the difference between each of the guesses and the actual price will be calculated.**
+**The person with the largest price difference will be chosen to pay that difference as the tip.** 
+Example Output:
+```
+Person 3, you must pay the difference of $14.90 as the tip.
+```
+
+
+**4) The remaining person(s) will then split the total bill for the meal (not including tips).**
+**The computer will output the split value as well as the total cost of the meal.**
+
+Example Output with example meal price of $60.50:
+```
+The rest of you must pay $20.17 each, for the total meal price of $60.50
+```
+    
+
+
+### 5. Setting the ordering location
+
+### 6. Placing the order
+
