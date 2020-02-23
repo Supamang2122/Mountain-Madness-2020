@@ -29,7 +29,7 @@ How often do you visit the seaside?
 from google import google
 my_search = google.search('Search terms')
 ```
-   This Google API software uses screen scraping to retreive search results from google.com. After cleaning the text extracted from the search, I concat all the text together as one really long string that represents all the text available on first pages of google. I then score each of my search results in order to determine which one would be the best. 
+   This Google API software uses screen scraping to retreive search results from google.com. 
    
    **my_search** will contain a list of GoogleResult objects
    
@@ -43,6 +43,26 @@ self.cached # A link to the cached version of the page
 self.page # What page this result was on (When searching more than one page)
 self.index # What index on this page it was on
 ```   
+After cleaning the text extracted from the search, I concatenate all the text together as one really long string that represents all the text available on first pages of google. I then score each of my search results in order to determine which one would be the best. 
+
+In order to find the answer, I use n-grams. For example, if the search term is 'How often visit sea Kylie Jenner', then,
+```
+1-grams = ["How", "often", "visit", "sea", "Kylie", "Jenner"]
+2-grams = ["How often", "visit sea", "Kylie Jenner"]
+etc.
+```
+
+Rather that counting in the google search result the entire choice string (preprocessed), we look for the 1-grams, 2-grams and the full string (preprocessed as method 1).
+The score is thus the sum of these sub scores, each sub score having a multiplier:
+
+```
+total_score = 1*(1-grams occurences) + 3*(2-grams occurences) + 10*(full string occurences)
+```
+
+In that way, if only one word of the choice occurs, it only adds 1 point to the total score, if a 2-gram is found is found, adds 3 points, and if the full string is found, it adds 10 points.
+
+For example, it is relevant to take in consideration the word **Washington** by itself as **George Washington** can be described as M. Washington, or President Washington etc. But of course, if both words **George** and **Washington** are found side by side it should add up more points.
+
 ### 3. Generating and determining the final bill
 
 ### 4. Dividing the Payment - The price is right
